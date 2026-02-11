@@ -1,17 +1,17 @@
-{/* PAGE 3 */}
+/* PAGE 3 */
 import Reveal from "./Reveal"
 
 export default function Cards() {
   return (
     <Reveal>
-      <section className="bg-[#e8e2d8] py-24">
-        <div className="max-w-10xl mx-auto px-8 bg-[#edebe7]">
+      <section className="bg-[#e8e2d8] py-16 sm:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 bg-[#edebe7]">
 
-          <h2 className="text-5xl text-center text-[#24351f] font-bold mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center text-[#24351f] font-bold mb-12 sm:mb-16 lg:mb-20">
             My Specialties
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10 bg-[#ede1dd]">
+          <div className="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3 bg-[#ede1dd] p-6 sm:p-8">
 
             {[
               {
@@ -35,23 +35,23 @@ export default function Cards() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="border border-[#24351f] p-10 flex flex-col justify-between min-h-[650px]"
+                className="border border-[#24351f] p-6 sm:p-8 lg:p-10 flex flex-col justify-between min-h-[480px] sm:min-h-[520px] lg:min-h-[600px]"
               >
                 <div>
-                  <h3 className="text-3xl text-[#24351f] font-semibold mb-6">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#24351f] font-semibold mb-4 sm:mb-6">
                     {item.title}
                   </h3>
 
-                  <p className="text-[#24351f]/80 leading-relaxed text-xl font-semibold">
+                  <p className="text-[#24351f]/80 leading-relaxed text-base sm:text-lg">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-12 flex justify-center">
+                <div className="mt-10 sm:mt-12 flex justify-center">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-64 h-64 object-cover rounded-full"
+                    className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-cover rounded-full"
                   />
                 </div>
               </div>
